@@ -66,7 +66,16 @@ void LLISTABI_destrueixl(LlistaBi *l) {
 }
 
 void LLISTABI_esborra(LlistaBi *l) {
-
+    NodeBi *aux;
+    if (l->pri->seg==NULL || l->ult->ant==NULL) {
+        //Error
+    } else {
+        aux=l->pdi;
+        l->pdi->ant->seg=l->pdi->seg;
+        l->pdi->seg->ant=l->pdi->ant;
+        l->pdi=l->pdi->seg;
+        free(aux);
+    }
 }
 
 void LLISTABI_avanca (LlistaBi *l) {
