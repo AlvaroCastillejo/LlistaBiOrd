@@ -99,7 +99,21 @@ int LLISTABI_buida (LlistaBi l) {
 }
 
 void LLISTABI_insereixDavant (LlistaBi *l, Element e) {
-
+	NodeBi *aux; 
+	aux=(NodeBi*)malloc(sizeof(NodeBi)); 
+	if (l->pdi->ant==NULL) { 
+	 	//Error 
+	} else { 
+		if (aux==NULL) { 
+			//Error 
+		} else {	
+		 	aux->e=e; 
+		 	aux->seg=l->pdi; 
+		 	aux->ant=l->pdi->ant; 
+		 	aux->ant->seg=aux;
+			l->pdi->ant=aux; 
+		}
+	}
 }
 
 void LLISTABI_insereixOrdenat (Element e, LlistaBi *l) {
