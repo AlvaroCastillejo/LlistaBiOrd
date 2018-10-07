@@ -50,7 +50,19 @@ int LLISTABI_final(LlistaBi l) {
 }
 
 void LLISTABI_destrueixl(LlistaBi *l) {
-
+    NodeBi *aux;
+    aux=(NodeBi*)malloc(sizeof(NodeBi));
+    if (aux==NULL) {
+        //Error
+    } else {
+        while (l->pri!=NULL) {
+            aux=l->pri;
+            l->pri=aux->seg;
+            free(aux);
+        }
+        l->ult=NULL;
+        l->pdi=NULL;
+    }
 }
 
 void LLISTABI_esborra(LlistaBi *l) {
