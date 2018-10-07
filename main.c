@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <conio.h>
+#include "llista.h"
 
 void main() {
 	LlistaBi l;
@@ -34,5 +35,6 @@ void main() {
 	for(i=0;i<=n;i++){
 		element = LLISTABI_consulta(l);
 		printf("%d\n", element);
-		LLISTABI_retocedeix(&l); 
+		LLISTABI_retocedeix(&l);
+	} 
 }
