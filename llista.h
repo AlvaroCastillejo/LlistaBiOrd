@@ -6,20 +6,24 @@
 
 #define ELEMENT_indefinit -1
 
+//El que omple la llista. Son enters.
 typedef int Element;
 
-typedef struct N { 
+//Estructura d'un node de la llista
+typedef struct N { 		
 	Element e; 
 	struct N *seg; 
 	struct N *ant; 
 } NodeBi; 
 
+//Estructura de la llista composta per nodes
 typedef struct { 
 	NodeBi *pri; 
 	NodeBi *ult; 
 	NodeBi *pdi; 
 } LlistaBi; 
 
+//Descripcions a "llista.c"
 LlistaBi LLISTABI_crea(); 
 Element LLISTABI_consulta (LlistaBi l); 
 void LLISTABI_esborra (LlistaBi *l); 
