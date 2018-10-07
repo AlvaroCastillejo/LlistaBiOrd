@@ -87,7 +87,11 @@ void LLISTABI_avanca (LlistaBi *l) {
 }
 
 void LLISTABI_retocedeix(LlistaBi*l) {
-
+    if (l->pdi->ant==NULL) {
+        //Error
+    } else {
+        l->pdi=l->pdi->ant;
+    }
 }
 
 int LLISTABI_buida (LlistaBi l) {
