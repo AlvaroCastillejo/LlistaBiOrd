@@ -117,5 +117,23 @@ void LLISTABI_insereixDavant (LlistaBi *l, Element e) {
 }
 
 void LLISTABI_insereixOrdenat (Element e, LlistaBi *l) {
+	NodeBi *aux; 
+	aux=(NodeBi*)malloc(sizeof(NodeBi)); 
+	int trobat = 0;
 
+	if (aux==NULL) { 
+		 //Error 
+	} else { 
+		LLISTABI_VesInici(&*l);
+		while(!trobat && !LLISTABI_final(*l)){
+			if(e < LLISTABI_consulta(*l)){
+				LLISTABI_avanca(&*l);
+				trobat = 0;
+			} else {
+				LLISTABI_avanca (&l)
+				LLISTABI_insereixDavant(&*l, e);
+				trobat = 1;
+			}
+		} 
+	}
 }
