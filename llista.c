@@ -1,7 +1,26 @@
 #include "llista.h"
 
 LlistaBi LLISTABI_crea () {
+	LlistaBi l; 
 
+    l.pri = (NodeBi*) malloc (sizeof(NodeBi));  
+
+    if (l.pri == NULL) { 
+        //Error 
+    } else { 
+        l.ult=(NodeBi*)malloc(sizeof(NodeBi));     
+        if (l.ult==NULL) {       
+            free(l.pri);        
+            //Error 
+        } else { 
+        	l.pri->seg = l.ult;
+			l.ult->ant = l.pri;
+		    l.ult->seg = NULL;
+		    l.pri->ant = NULL;
+		    l.pdi = l.ult;
+        }
+    }   
+    return l;     
 }
 
 Element LLISTABI_consulta (LlistaBi l) {
