@@ -13,7 +13,7 @@ void main() {
 	printf("Quants numeros vols introduir: ");
 	scanf("%d", &n);
 
-	for(i=0;i<=n;i++){
+	for(i=0;i<n;i++){
 		printf("\nIntrodueix un numero: ");
 		scanf("%d", &element);
 		fflushnou();
@@ -23,7 +23,7 @@ void main() {
 	printf("Aquesta es la llista ordenada: \n");
 
 	LLISTABI_VesInici (&l); 
-	for(i=0;i<=n;i++){
+	for(i=0;i<n;i++){
 		element = LLISTABI_consulta(l);
 		printf("%d\n", element);
 		LLISTABI_avanca(&l);
@@ -32,7 +32,7 @@ void main() {
 	printf("Aquesta es la llista ordenada a la inversa: \n");
 
 	LLISTABI_VesFinal (&l); 
-	for(i=0;i<=n;i++){
+	for(i=0;i<n;i++){
 		element = LLISTABI_consulta(l);
 		printf("%d\n", element);
 		LLISTABI_retocedeix(&l);
