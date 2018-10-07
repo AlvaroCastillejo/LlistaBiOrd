@@ -79,7 +79,11 @@ void LLISTABI_esborra(LlistaBi *l) {
 }
 
 void LLISTABI_avanca (LlistaBi *l) {
-
+    if (l->pdi->seg==NULL) {
+        //Error
+    } else {
+        l->pdi=l->pdi->seg;
+    }
 }
 
 void LLISTABI_retocedeix(LlistaBi*l) {
