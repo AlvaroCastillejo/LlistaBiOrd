@@ -42,11 +42,11 @@ void LLISTABI_VesFinal (LlistaBi *l) {
 }
 
 int LLISTABI_inici(LlistaBi l) {
-
+    return l.pdi==l.pri;
 }
 
 int LLISTABI_final(LlistaBi l) {
-
+    return l.pdi==l.ult;
 }
 
 void LLISTABI_destrueixl(LlistaBi *l) {
