@@ -21,16 +21,16 @@ void main() {
 
 	printf("Quants numeros vols introduir: ");
 	scanf("%d", &n);
-
+	printf("\n");
 	//Bucle que demana els nombres.
 	for(i=0;i<n;i++){
-		printf("\nIntrodueix un numero: ");
+		printf("Introdueix un numero: ");
 		scanf("%d", &element);
 		fflushnou();
 	    LLISTABI_insereixOrdenat(element, &l);  
 	}
 
-	printf("Aquesta es la llista ordenada: \n");
+	printf("\nAquesta es la llista ordenada: \n");
 
 	//Bucle que mostra la llista.
 	LLISTABI_VesInici (&l); 
@@ -40,7 +40,7 @@ void main() {
 		LLISTABI_avanca(&l);
 	}
 
-	printf("Aquesta es la llista ordenada a la inversa: \n");
+	printf("\nAquesta es la llista ordenada a la inversa: \n");
 
 	//Bucle que mostra la llista del reves.
 	LLISTABI_VesFinal (&l); 
@@ -49,4 +49,6 @@ void main() {
 		printf("%d\n", element);
 		LLISTABI_retocedeix(&l);
 	} 
+
+	printf("Adeu y gracies!");
 }
