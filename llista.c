@@ -130,7 +130,7 @@ void LLISTABI_insereixOrdenat (Element e, LlistaBi *l) {
 				LLISTABI_avanca(&*l);
 				trobat = 0;
 			} else {
-				LLISTABI_avanca (&l)
+				LLISTABI_avanca (&*l);
 				LLISTABI_insereixDavant(&*l, e);
 				trobat = 1;
 			}
