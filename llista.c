@@ -95,7 +95,7 @@ void LLISTABI_retocedeix(LlistaBi*l) {
 }
 
 int LLISTABI_buida (LlistaBi l) {
-
+    return l.pri->seg==l.ult;
 }
 
 void LLISTABI_insereixDavant (LlistaBi *l, Element e) {
