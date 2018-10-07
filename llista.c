@@ -24,7 +24,13 @@ LlistaBi LLISTABI_crea () {
 }
 
 Element LLISTABI_consulta (LlistaBi l) {
-
+    Element e=ELEMENT_indefinit;
+    if (l.pri->seg==NULL && l.ult->ant==NULL) {
+        //Error llista buida
+    } else {
+        e=l.pdi->e;
+    }
+    return e;
 }
 
 void LLISTABI_VesInici (LlistaBi *l) {
