@@ -1,18 +1,28 @@
+/******************************************
+*
+*No he conseguir fer funcionar la funcio  
+*"Insereix ordenat", per aixo el programa 
+*et mostra que tots els elements son "0"
+*
+******************************************/
+
+
 #include <stdio.h>
 #include <conio.h>
 #include "llista.h"
 
 void main() {
-	LlistaBi l;
-	Element element;
-	int n;
-	int i;
+	LlistaBi l;					//La llista es diu "l".
+	Element element;			//Els elements a inserir es diuen "element".
+	int n;						//Nombre d'elements a introduir.
+	int i;						//Variable auxiliar pels bucles.
 
 	l = LLISTABI_crea();
 
 	printf("Quants numeros vols introduir: ");
 	scanf("%d", &n);
 
+	//Bucle que demana els nombres.
 	for(i=0;i<n;i++){
 		printf("\nIntrodueix un numero: ");
 		scanf("%d", &element);
@@ -22,6 +32,7 @@ void main() {
 
 	printf("Aquesta es la llista ordenada: \n");
 
+	//Bucle que mostra la llista.
 	LLISTABI_VesInici (&l); 
 	for(i=0;i<n;i++){
 		element = LLISTABI_consulta(l);
@@ -31,6 +42,7 @@ void main() {
 
 	printf("Aquesta es la llista ordenada a la inversa: \n");
 
+	//Bucle que mostra la llista del reves.
 	LLISTABI_VesFinal (&l); 
 	for(i=0;i<n;i++){
 		element = LLISTABI_consulta(l);
