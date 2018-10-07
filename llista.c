@@ -34,11 +34,11 @@ Element LLISTABI_consulta (LlistaBi l) {
 }
 
 void LLISTABI_VesInici (LlistaBi *l) {
-
+    l->pdi=l->pri->seg;
 }
 
 void LLISTABI_VesFinal (LlistaBi *l) {
-
+    l->pdi=l->ult->ant;
 }
 
 int LLISTABI_inici(LlistaBi l) {
